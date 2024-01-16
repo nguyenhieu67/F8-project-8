@@ -8,6 +8,11 @@
     padding-top: 54px;
     display: none;
 
+    @include abstracts.breakpoint(lg) {
+        position: initial;
+        padding-top: 0;
+    }
+
     &__inner {
         --inner-padding: 30px;
 
@@ -26,12 +31,27 @@
             translate: -50%;
             filter: var(--dropdown-arrow-color);
         }
+
+        @include abstracts.breakpoint(lg) {
+            padding: 0 40px;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+
+            &::before {
+                content: none;
+            }
+        }
+
+        @include abstracts.breakpoint(sm) {
+            padding: 0 20px;
+        }
     }
 }
 
 .top-menu {
     --main-column-width: 292px;
-    --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+    --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 1.95);
 
     position: relative;
 
@@ -40,6 +60,12 @@
         height: var(--max-inner-height);
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            height: auto;
+            border-right: none;
+        }
     }
 }
 
@@ -51,6 +77,10 @@
         margin-top: 22px;
     }
 
+    @include abstracts.breakpoint(lg) {
+        margin-top: 10px;
+    }
+
     &__icon {
         position: relative;
 
@@ -60,6 +90,10 @@
 
         @include abstracts.breakpoint(xl) {
             display: none;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            display: block;
         }
     }
 
@@ -83,15 +117,26 @@
         filter: var(--menu-column-icon-color);
     }
 
-    &__heading {
+    &__heading--one {
         margin-top: 6px;
+    }
+
+    &__heading {
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 150%;
+
+        @include abstracts.breakpoint(lg) {
+            margin-bottom: 26px;
+        }
     }
 
     &__list {
         margin-top: 19px;
+
+        @include abstracts.breakpoint(lg) {
+            margin-top: 0;
+        }
     }
 
     &__item {
@@ -100,7 +145,7 @@
         }
     }
 
-    &__item--active:hover > &__link,
+    &__item--active > &__link,
     &__item:hover > &__link {
         color: #0071dc;
         font-weight: 500;
@@ -126,6 +171,12 @@
 
     overflow-y: auto;
 
+    @include abstracts.breakpoint(lg) {
+        position: initial;
+        grid-template-columns: 1fr;
+        padding-left: 0;
+    }
+
     &--not-main {
         position: initial;
         inset: initial;
@@ -134,5 +185,10 @@
         grid-template-columns: repeat(4, 1fr);
         height: var(--max-inner-height);
         padding-left: 0;
+
+        @include abstracts.breakpoint(lg) {
+            grid-template-columns: 1fr;
+            height: auto;
+        }
     }
 }
