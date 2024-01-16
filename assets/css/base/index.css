@@ -139,6 +139,12 @@ table {
   box-sizing: border-box;
 }
 
+:root {
+  --text-color: #1a162e;
+  --icon-color: brightness(0) saturate(100%) invert(10%) sepia(35%)
+      saturate(848%) hue-rotate(210deg) brightness(96%) contrast(100%);
+}
+
 html {
   font-size: 62.5%;
 }
@@ -146,6 +152,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: Gordita, sans-serif;
+  color: var(--text-color);
 }
 
 a {
@@ -168,6 +175,10 @@ select {
   font-size: inherit;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
+}
+
+.icon {
+  filter: var(--icon-color);
 }
 
 .row > *, .container-fluid, .container {
