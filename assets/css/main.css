@@ -1391,6 +1391,7 @@ select {
     flex-direction: column;
     align-items: flex-start;
     overflow-y: auto;
+    overscroll-behavior: contain;
     height: calc(100% - 40px);
   }
 }
