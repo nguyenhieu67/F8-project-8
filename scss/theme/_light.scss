@@ -71,13 +71,23 @@ html {
     }
 
     // Breadcrumbs
-    --breadcrumbs--bg: #f6f6f6;
-    --breadcrumbs--shadow: rgba(237, 237, 246, 0.2);
+    --breadcrumbs-bg: #f6f6f6;
+    --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
 
     @include abstracts.screen(md) {
-        --breadcrumbs--bg: #fff;
+        --breadcrumbs-bg: #fff;
     }
 
     // Search bar
     --search-bar-bg: #fff;
+
+    // Review card
+    --review-card-bg: #fafafd;
+
+    @include abstracts.screen(md) {
+        ---review-card-bg: #fff;
+    }
+
+    // Text content
+    --text-content-hr-bg: #ebebeb;
 }

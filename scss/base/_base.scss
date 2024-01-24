@@ -5,6 +5,9 @@
 ::after {
     box-sizing: border-box;
 }
+* {
+    -webkit-tap-highlight-color: transparent;
+}
 
 html {
     font-size: 62.5%;
@@ -42,7 +45,6 @@ select {
     font-size: inherit;
     color: inherit;
     border: none;
-    -webkit-tap-highlight-color: transparent;
     outline: none;
 }
 
@@ -59,4 +61,14 @@ input {
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: 600;
 }
