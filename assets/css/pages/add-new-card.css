@@ -1,0 +1,11 @@
+.form-card__label {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+.form-card__bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=add-new-card.css.map */
